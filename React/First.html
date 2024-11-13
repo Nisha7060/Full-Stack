@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>React Example</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+       <div id="parent"></div>
+       <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+       <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+       <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/babel">
+            const parent = document.getElementById("parent");
+            const root = ReactDOM.createRoot(parent);
+            const h1 = <h1>React Dom</h1>;
+            const item1 = <li>Item 1</li>;
+            const item2 = <li>Item 2</li>;
+            const ul = <ul>{item1}{item2}</ul>;
+            root.render(<div>{h1}{ul}</div>);  // Wrapped in a div
+        </script>
+    </body>
+</html>
